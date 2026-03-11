@@ -1,0 +1,24 @@
+class Solution {
+    public boolean isAnagram(String s, String t) {
+        boolean r=true;
+        int freq[]=new int[26];
+        for(char c:s.toCharArray())
+        {
+          freq[c-'a']=freq[c-'a']+1;
+        }
+        for(char v:t.toCharArray())
+        {
+          freq[v-'a']=freq[v-'a']-1;
+        }
+        for(int i:freq)
+        {
+  if (i!=0)
+  {
+    return r=false;
+   
+  }
+  
+        }
+return r;
+    }
+}
